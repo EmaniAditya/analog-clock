@@ -1,49 +1,88 @@
-
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
 }
 
 .clock {
     position: relative;
-    width: 200px;
-    height: 200px;
-    border: 10px solid #333;
+    width: 300px;
+    height: 300px;
+    border: 14px solid #333;
     border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.2),
+        inset 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.clock div {
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hour-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hour-marks div {
+    width: 3px;
+    height: 15px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 140px;
+}
+
+.hour-marks div:nth-child(3n) {
+    height: 20px;
+    width: 4px;
+    margin-left: -2px;
+}
+
+.hand {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform-origin: 50% 100%;
-    transition-timing-function: steps(1);
+    transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44);
 }
 
 .hour-hand {
-    width: 6px;
-    height: 50px;
+    width: 8px;
+    height: 80px;
     background-color: #333;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%);
+    border-radius: 4px;
 }
 
 .minute-hand {
-    width: 4px;
-    height: 70px;
+    width: 6px;
+    height: 110px;
     background-color: #666;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%);
+    border-radius: 3px;
 }
 
 .second-hand {
     width: 2px;
-    height: 80px;
-    background-color: red;
-    transform: translateX(-50%) translateY(50%);
+    height: 130px;
+    background-color: #ff6b6b;
+    transform: translateX(-50%);
 }
