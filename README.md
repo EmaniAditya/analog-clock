@@ -4,13 +4,10 @@ A real-time analog clock implementation using HTML, CSS, and JavaScript.
 
 ## Features
 
-- Real-time clock movement with smooth hand transitions
-- High-precision timekeeping using RequestAnimationFrame
-- Responsive design that works across all device sizes
-- Elegant UI with subtle shadows and depth effects
-- Pure vanilla JavaScript implementation (no dependencies)
-- Cross-browser compatibility
-- Optimized performance with minimal CPU usage
+- Real-time clock movement
+- timekeeping using RequestAnimationFrame
+- Responsive design
+- JavaScript implementation (no dependencies)
 
 ## Live Demo
 
