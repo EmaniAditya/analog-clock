@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,6 +18,7 @@ body {
     box-shadow: 
         0 0 10px rgba(0, 0, 0, 0.2),
         inset 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between the clock and the footer */
 }
 
 .clock::before {
@@ -86,3 +88,19 @@ body {
     background-color: #ff6b6b;
     transform: translateX(-50%);
 }
+
+footer {
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+}
+
+footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
